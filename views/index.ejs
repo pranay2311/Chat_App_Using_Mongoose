@@ -20,9 +20,13 @@
         <form action="/chats/<%= chat._id %>/edit" method="get">
           <button>Edit</button>
         </form>
+        <br> <br> <br>
+        <form action="/chats/<%= chat._id %>?_method=DELETE" method="POST">
+          <button>Delete</button>
+        </form>
       </div>
       <p>Received By <%= chat.to %></p>
-      <hr />
+      <hr /> 
 
       <p>
         Day: <%= chat.created_at ? chat.created_at.toDateString().split(" ")[0]
